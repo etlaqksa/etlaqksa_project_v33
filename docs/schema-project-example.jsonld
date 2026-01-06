@@ -1,0 +1,32 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Project",
+  "name": "{PROJECT_NAME}",
+  "description": "{PROJECT_SUMMARY}",
+  "url": "https://etlaqksa.com/projects/{PROJECT_SLUG}",
+  "provider": {
+    "@type": "Organization",
+    "name": "Etlaq",
+    "url": "https://etlaqksa.com",
+    "logo": "https://etlaqksa.com/logo.png"
+  },
+  "about": {
+    "@type": "Organization",
+    "name": "{CLIENT_NAME}",
+    "url": "{CLIENT_WEBSITE_OR_CASESTUDY_URL}",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://etlaqksa.com/images/client-logos/{CLIENT_LOGO_FILE}.webp",
+      "contentUrl": "https://etlaqksa.com/images/client-logos/{CLIENT_LOGO_FILE}.webp",
+      "caption": "{CLIENT_NAME}"
+    }
+  },
+  "location": {
+    "@type": "Place",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "{CITY}",
+      "addressCountry": "SA"
+    }
+  }
+}

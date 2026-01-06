@@ -1,0 +1,87 @@
+/* Client logos slider (v1)
+   - default: desaturated to keep a serious aesthetic
+   - hover/focus: restore color
+*/
+:root{
+  --logos-height: 72px;
+  --logos-gap: 56px;
+  --logos-speed: 40s;
+}
+
+.client-logos{
+  padding: 28px 0;
+  border-top: 1px solid rgba(0,0,0,.06);
+  border-bottom: 1px solid rgba(0,0,0,.06);
+  background: #fff;
+}
+
+.client-logos__container{
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 0 16px;
+}
+
+.client-logos__title{
+  font-size: 14px;
+  letter-spacing: .3px;
+  color: rgba(11,45,77,.85);
+  margin: 0 0 14px;
+}
+
+.client-logos__marquee{
+  position: relative;
+  overflow: hidden;
+  /* fade edges */
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+
+.client-logos__track{
+  display: flex;
+  align-items: center;
+  gap: var(--logos-gap);
+  width: max-content;
+  animation: logos-scroll var(--logos-speed) linear infinite;
+  will-change: transform;
+  padding: 8px 0;
+}
+
+.client-logos__marquee:hover .client-logos__track,
+.client-logos__marquee:focus-within .client-logos__track{
+  animation-play-state: paused;
+}
+
+.client-logos__item{
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: var(--logos-height);
+}
+
+.client-logos__img{
+  height: var(--logos-height);
+  width: auto;
+  max-width: 220px;
+  object-fit: contain;
+  filter: grayscale(100%) saturate(0) contrast(1.05) opacity(.9);
+  transition: filter .2s ease, transform .2s ease;
+}
+
+.client-logos__link:hover .client-logos__img,
+.client-logos__link:focus-visible .client-logos__img{
+  filter: grayscale(0) saturate(1) contrast(1.05) opacity(1);
+  transform: translateY(-1px);
+}
+
+.client-logos__link{outline: none; border-radius: 12px;}
+.client-logos__link:focus-visible{box-shadow: 0 0 0 3px rgba(11,45,77,.25);} 
+
+@keyframes logos-scroll{
+  from{ transform: translateX(0); }
+  to{ transform: translateX(-50%); }
+}
+
+/* Respect reduced motion */
+@media (prefers-reduced-motion: reduce){
+  .client-logos__track{ animation: none; }
+}

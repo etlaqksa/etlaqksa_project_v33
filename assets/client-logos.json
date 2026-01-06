@@ -1,0 +1,119 @@
+{
+  "version": "v1",
+  "size": [
+    360,
+    180
+  ],
+  "clients": [
+    {
+      "name_ar": "شركة العسيس للمقاولات",
+      "name_en": "Al Osais International Holding Co.",
+      "slug": "al-osis",
+      "src": "/mnt/data/شركة العسيس للمقاولات.png",
+      "file": "/images/client-logos/al-osis.webp",
+      "alt_ar": "شعار شركة العسيس للمقاولات — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Al Osais International Holding Co. — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "الشركة العربية للمختبرات والتربة",
+      "name_en": "Arab Company for Laboratories & Soil",
+      "slug": "arab-labs-soil",
+      "src": "/mnt/data/الشركة العربية للمختبرات والتربة.png",
+      "file": "/images/client-logos/arab-labs-soil.webp",
+      "alt_ar": "شعار الشركة العربية للمختبرات والتربة — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Arab Company for Laboratories & Soil — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "أرامكو السعودية",
+      "name_en": "Saudi Aramco",
+      "slug": "saudi-aramco",
+      "src": "/mnt/data/أرامكو السعودية.webp",
+      "file": "/images/client-logos/saudi-aramco.webp",
+      "alt_ar": "شعار أرامكو السعودية — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Saudi Aramco — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة ركين العقارية",
+      "name_en": "Rakeen Real Estate",
+      "slug": "rakeen",
+      "src": "/mnt/data/شركة ركين العقارية.png",
+      "file": "/images/client-logos/rakeen.webp",
+      "alt_ar": "شعار شركة ركين العقارية — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Rakeen Real Estate — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة دار وإعمار للاستثمار والتطوير العقاري",
+      "name_en": "Dar & Emaar for Investment and Real Estate Development",
+      "slug": "dar-emaar",
+      "src": "/mnt/data/شركة دار وإعمار للاستثمار والتطوير العقاري.svg",
+      "file": "/images/client-logos/dar-emaar.webp",
+      "alt_ar": "شعار شركة دار وإعمار للاستثمار والتطوير العقاري — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Dar & Emaar for Investment and Real Estate Development — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة فرسينيه",
+      "name_en": "Freyssinet Saudi Arabia",
+      "slug": "freyssinet",
+      "src": "/mnt/data/شركة فرسينيه.jpg",
+      "file": "/images/client-logos/freyssinet.webp",
+      "alt_ar": "شعار شركة فرسينيه — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Freyssinet Saudi Arabia — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة التربة والأساسات المحدودة - سفكو",
+      "name_en": "SAFCO Soil & Foundation Co. Ltd.",
+      "slug": "safco",
+      "src": "/mnt/data/شركة التربة والأساسات المحدودة - سفكو.png",
+      "file": "/images/client-logos/safco.webp",
+      "alt_ar": "شعار شركة التربة والأساسات المحدودة - سفكو — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of SAFCO Soil & Foundation Co. Ltd. — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة يوكسال إنشاءات السعودية",
+      "name_en": "Yüksel Construction Saudi Arabia",
+      "slug": "yuksel",
+      "src": "/mnt/data/شركة يوكسال إنشاءات السعودية.svg",
+      "file": "/images/client-logos/yuksel.webp",
+      "alt_ar": "شعار شركة يوكسال إنشاءات السعودية — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Yüksel Construction Saudi Arabia — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة اتحاد البواني",
+      "name_en": "Al Bawani",
+      "slug": "al-bawani",
+      "src": "/mnt/data/شركة اتحاد البواني.png",
+      "file": "/images/client-logos/al-bawani.webp",
+      "alt_ar": "شعار شركة اتحاد البواني — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of Al Bawani — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    },
+    {
+      "name_ar": "شركة فاست",
+      "name_en": "FAST Riyadh Metro Alliance",
+      "slug": "fast",
+      "src": "/mnt/data/شركة فاست.jpg",
+      "file": "/images/client-logos/fast.webp",
+      "alt_ar": "شعار شركة فاست — مشروع: {اسم_المشروع} — النوع: {نوع_المشروع}",
+      "alt_en": "Logo of FAST Riyadh Metro Alliance — Project: {PROJECT_NAME} — Type: {PROJECT_TYPE}",
+      "project_name_placeholder": true,
+      "website": ""
+    }
+  ]
+}
