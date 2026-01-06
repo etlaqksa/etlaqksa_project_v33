@@ -1,0 +1,42 @@
+# Force no-cache for images and assets during development
+<IfModule mod_headers.c>
+  # Disable caching for PNG images
+  <FilesMatch "\.(png|jpg|jpeg|gif|svg|ico)$">
+    Header set Cache-Control "no-cache, no-store, must-revalidate"
+    Header set Pragma "no-cache"
+    Header set Expires 0
+  </FilesMatch>
+  
+  # Enable CORS for fonts
+  <FilesMatch "\.(ttf|otf|eot|woff|woff2)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# Enable compression
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
+</IfModule>
+
+
+
+
+# --- SPA / language routing (Apache) ---
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+
+  # If the requested resource exists as a file or directory, serve it directly
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Root -> Arabic
+  RewriteRule ^$ ar/ [R=301,L]
+
+  # Language SPAs
+  RewriteRule ^ar(/.*)?$ ar/index.html [L]
+  RewriteRule ^en(/.*)?$ en/index.html [L]
+
+  # Legacy routes -> Arabic SPA
+  RewriteRule ^.*$ ar/index.html [L]
+</IfModule>

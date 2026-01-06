@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+
+<html dir="ltr" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1" name="viewport"/>
+<meta content="#0B2D4D" name="theme-color"/>
+<meta content="Etlaqksa Co. Ltd. — Advanced engineering solutions for soil grouting, cavity treatment, and geophysical surveys across Saudi Arabia." name="description"/>
+<link href="/favicon.png?v=2" rel="icon" sizes="32x32" type="image/png"/>
+<link href="/favicon.png?v=2" rel="icon" sizes="16x16" type="image/png"/>
+<link href="/favicon.png?v=2" rel="apple-touch-icon" sizes="180x180"/>
+<link href="/favicon.png?v=2" rel="shortcut icon"/>
+<link href="/manifest.json" rel="manifest"/>
+<title>Etlaqksa | Soil Grouting &amp; Subsurface Investigation</title>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://etlaqksa.com/#organization",
+          "name": "Etlaq",
+          "url": "https://etlaqksa.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "@id": "https://etlaqksa.com/#logo",
+            "url": "https://etlaqksa.com/logo.png",
+            "contentUrl": "https://etlaqksa.com/logo.png"
+          },
+          "contactPoint": [
+            {
+              "@type": "ContactPoint",
+              "contactType": "customer support",
+              "telephone": "+966534145922",
+              "email": "etlaqksa@gmail.com",
+              "availableLanguage": ["ar", "en"]
+            }
+          ]
+        },
+        {
+          "@type": ["LocalBusiness", "ProfessionalService"],
+          "@id": "https://etlaqksa.com/#localbusiness",
+          "name": "Etlaq",
+          "url": "https://etlaqksa.com/",
+          "telephone": "+966534145922",
+          "email": "etlaqksa@gmail.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Riyadh",
+            "addressRegion": "Riyadh Province",
+            "addressCountry": "SA",
+            "streetAddress": "Anas Bin Malik Rd, Al Yasmin"
+          },
+          "hasMap": "https://maps.google.com/?q=4348+Anas+Bin+Malik+Road,+Al+Yasmin,+Riyadh,+Saudi+Arabia",
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+              "opens": "08:30",
+              "closes": "17:30"
+            }
+          ],
+          "areaServed": [
+            { "@type": "Country", "name": "Saudi Arabia" }
+          ],
+          "knowsLanguage": ["ar", "en"],
+          "parentOrganization": { "@id": "https://etlaqksa.com/#organization" }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://etlaqksa.com/#service-soil-injection",
+          "name": "Soil Injection",
+          "serviceType": "Geotechnical",
+          "category": "Geotechnical Engineering",
+          "description": "Specialized soil injection (cement grouting) solutions to improve ground stability, fill voids, and mitigate settlement risks for major infrastructure and building projects.",
+          "provider": { "@id": "https://etlaqksa.com/#localbusiness" },
+          "areaServed": [
+            { "@type": "Country", "name": "Saudi Arabia" }
+          ],
+          "audience": {
+            "@type": "Audience",
+            "audienceType": ["Engineering Consultants", "Contractors", "Developers", "Government Agencies"]
+          },
+          "termsOfService": "Engineering team will respond to all technical inquiries within 24 business hours."
+        }
+      ]
+    }
+    </script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="preload">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Tajawal:wght@300;400;500;700;800&amp;display=swap" media="print" onload="this.media='all'" rel="stylesheet">
+<noscript><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Tajawal:wght@300;400;500;700;800&amp;display=swap" rel="stylesheet"/></noscript>
+<link crossorigin="" href="/assets/index-CiKp3VwU.css" rel="stylesheet"/>
+<link href="/assets/theme-v03.css" rel="stylesheet"/>
+<script>
+/** Etlaqksa deployment hardening (static + /ar, /en) **/
+(function () {
+  try {
+    // Force light mode (disable dark)
+    document.documentElement.classList.remove('dark');
+    localStorage.setItem('themeMode', 'light');
+    localStorage.setItem('theme', 'light');
+
+    // Apply saved color theme
+    var theme = localStorage.getItem('colorTheme') || localStorage.getItem('themeColor') || localStorage.getItem('data-theme') || 'blue';
+    if (theme) document.documentElement.setAttribute('data-theme', theme);
+
+    // Hide "Company Profile" link everywhere (requested)
+    var style = document.createElement('style');
+    style.textContent = 'a[href="/company-profile.pdf"]{display:none!important}';
+    document.head.appendChild(style);
+
+    // Force full page navigation for static, non-SPA pages (gallery/projects)
+    document.addEventListener('click', function (e) {
+      var a = e.target && e.target.closest ? e.target.closest('a') : null;
+      if (!a) return;
+      var href = a.getAttribute('href');
+      if (!href || href.startsWith('http') || href.startsWith('mailto:') || href.startsWith('tel:') || a.target === '_blank') return;
+      var url = new URL(href, location.origin);
+      var path = url.pathname;
+      var stripped = path.replace(/^\/(ar|en)/, '') || '/';
+      if (stripped.startsWith('/gallery') || stripped.startsWith('/projects')) {
+        e.preventDefault();
+        location.href = path + url.search + url.hash;
+      }
+    }, true);
+
+    // Language toggle button: keep same route, switch base between /ar and /en
+    document.addEventListener('click', function (e) {
+      var btn = e.target && e.target.closest ? e.target.closest('button') : null;
+      if (!btn) return;
+      var t = (btn.textContent || '').trim();
+      if (t !== 'EN' && t !== 'العربية') return;
+      e.preventDefault();
+      var p = location.pathname;
+      var toEn = !(p.startsWith('/en'));
+      var baseOld = p.startsWith('/en') ? '/en' : (p.startsWith('/ar') ? '/ar' : '');
+      var baseNew = toEn ? '/en' : '/ar';
+      var rest = baseOld ? p.slice(baseOld.length) : p;
+      if (!rest) rest = '/';
+      localStorage.setItem('language', toEn ? 'en' : 'ar');
+      location.href = baseNew + rest + location.search + location.hash;
+    }, true);
+  } catch (err) {
+    // no-op
+  }
+})();
+</script>
+<script>
+  (function () {
+    function supportsWebP() {
+      try {
+        var c = document.createElement('canvas');
+        if (!c.getContext) return false;
+        return c.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+      } catch (e) {
+        return false;
+      }
+    }
+    if (supportsWebP()) return;
+
+    function mapExt(url) {
+      if (!url || typeof url !== 'string') return url;
+      if (url.indexOf('.webp') === -1) return url;
+      // Preserve transparency for icons
+      if (url.indexOf('/assets/icons/') !== -1) return url.replace(/\.webp(\?.*)?$/i, '.png$1');
+      return url.replace(/\.webp(\?.*)?$/i, '.jpg$1');
+    }
+
+    // Patch setAttribute for src/srcset
+    var _setAttr = Element.prototype.setAttribute;
+    Element.prototype.setAttribute = function (name, value) {
+      if (name === 'src' || name === 'srcset') value = mapExt(value);
+      return _setAttr.call(this, name, value);
+    };
+
+    // Patch HTMLImageElement.src setter
+    var desc = Object.getOwnPropertyDescriptor(HTMLImageElement.prototype, 'src');
+    if (desc && desc.set) {
+      Object.defineProperty(HTMLImageElement.prototype, 'src', {
+        get: desc.get,
+        set: function (v) { return desc.set.call(this, mapExt(v)); }
+      });
+    }
+
+    // Swap any images already in DOM
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('img').forEach(function (img) {
+        if (img.src && img.src.indexOf('.webp') !== -1) img.src = mapExt(img.src);
+        if (img.srcset && img.srcset.indexOf('.webp') !== -1) {
+          img.srcset = img.srcset.split(',').map(function (s) {
+            var parts = s.trim().split(/\s+/);
+            parts[0] = mapExt(parts[0]);
+            return parts.join(' ');
+          }).join(', ');
+        }
+      });
+    });
+  })();
+  </script>
+<script crossorigin="" src="/assets/index-eJX6DrDG.js" type="module"></script>
+<style>
+/* v13 critical: reduce CLS before full CSS loads */
+:root{color-scheme:light;}
+html,body{background:#FFFFFF;}
+</style>
+<link as="image" href="/gallery/Etlaq%20(9).webp" imagesrcset="/gallery/Etlaq%20(9).webp" rel="preload">
+<link href="/assets/Home-C7anY17k.js" rel="modulepreload">
+</link></link></link></link></head>
+<body>
+<div id="root"></div>
+<!-- Netlify Forms (static definitions for SPA submissions) -->
+<form data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" hidden="" method="POST" name="request-service">
+<input name="form-name" type="hidden" value="request-service"/>
+<input name="bot-field"/>
+<input name="service" type="text"/>
+<input name="projectType" type="text"/>
+<input name="city" type="text"/>
+<input name="problem" type="text"/>
+<textarea name="details"></textarea>
+<input multiple="" name="attachments" type="file"/>
+<input name="name" type="text"/>
+<input name="email" type="email"/>
+<input name="phone" type="tel"/>
+</form>
+<form data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" hidden="" method="POST" name="contact">
+<input name="form-name" type="hidden" value="contact"/>
+<input name="bot-field"/>
+<input name="name" type="text"/>
+<input name="company" type="text"/>
+<input name="email" type="email"/>
+<input name="phone" type="tel"/>
+<input name="projectType" type="text"/>
+<textarea name="inquiry"></textarea>
+<input multiple="" name="attachments" type="file"/>
+</form>
+<form data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data" hidden="" method="POST" name="quick-assessment">
+<input name="form-name" type="hidden" value="quick-assessment"/>
+<input name="bot-field"/>
+<input name="problemType" type="text"/>
+<input name="clientType" type="text"/>
+<input multiple="" name="attachments" type="file"/>
+</form>
+<script>
+/* v13 performance helpers: defer third-party iframes and enforce native lazy loading */
+(function(){
+  function loadIframe(ifr){
+    if(!ifr || ifr.__loaded) return;
+    var ds = ifr.getAttribute('data-src');
+    if(ds){
+      ifr.setAttribute('src', ds);
+      ifr.__loaded = 1;
+    }
+  }
+
+  // Lazy-load third-party iframes (e.g., Google Maps) only when near viewport
+  var ifrs = Array.prototype.slice.call(document.querySelectorAll('iframe[data-src]'));
+  if(ifrs.length){
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(e){
+          if(e.isIntersecting){
+            loadIframe(e.target);
+            io.unobserve(e.target);
+          }
+        });
+      }, { rootMargin: '250px' });
+      ifrs.forEach(function(i){ io.observe(i); });
+    } else {
+      ifrs.forEach(loadIframe);
+    }
+  }
+
+  // Enforce native lazy-loading for non-hero images rendered later (MutationObserver)
+  function tuneImg(img){
+    if(!img || img.__tuned) return;
+    // Keep explicit eager / high priority images as-is
+    var loading = img.getAttribute('loading');
+    if(loading && loading.toLowerCase() === 'eager') { img.__tuned = 1; return; }
+    if(img.getAttribute('fetchpriority') === 'high') { img.__tuned = 1; return; }
+
+    if(!loading) img.setAttribute('loading','lazy');
+    if(!img.getAttribute('decoding')) img.setAttribute('decoding','async');
+    img.__tuned = 1;
+  }
+
+  document.querySelectorAll('img').forEach(tuneImg);
+
+  if('MutationObserver' in window){
+    var mo = new MutationObserver(function(muts){
+      muts.forEach(function(m){
+        m.addedNodes && m.addedNodes.forEach(function(n){
+          if(!n || n.nodeType !== 1) return;
+          if(n.tagName === 'IMG') tuneImg(n);
+          var imgs = n.querySelectorAll ? n.querySelectorAll('img') : [];
+          imgs && imgs.forEach && imgs.forEach(tuneImg);
+        });
+      });
+    });
+    mo.observe(document.documentElement, { childList: true, subtree: true });
+  }
+})();
+</script>
+
+<script>
+(function(){
+  const ICONS = {
+    grouting: "/assets/icons/service-grouting.webp",
+    cavity: "/assets/icons/service-cavity.webp",
+    geophysical: "/assets/icons/service-geophysical.webp"
+  };
+
+  function ensureSocialLinks(){
+    const footer = document.querySelector('footer[data-loc*="Footer.tsx"]') || document.querySelector("footer");
+    if(!footer || footer.querySelector(".et-social-block")) return;
+
+    const container = footer.querySelector(".container") || footer;
+    const block = document.createElement("div");
+    block.className = "et-social-block";
+    block.innerHTML = `
+      <div class="et-social-label">@etlaqksa</div>
+      <div class="et-social-links" aria-label="Etlaq social links">
+        <a data-icon="tiktok" href="https://www.tiktok.com/@etlaqksa" target="_blank" rel="noopener" aria-label="TikTok"></a>
+        <a data-icon="instagram" href="https://www.instagram.com/etlaqksa" target="_blank" rel="noopener" aria-label="Instagram"></a>
+        <a data-icon="x" href="https://x.com/etlaqksa" target="_blank" rel="noopener" aria-label="X"></a>
+      </div>
+    `;
+    container.appendChild(block);
+  }
+
+  function replaceIconInLink(a, iconSrc){
+    // Replace first SVG (or existing icon) inside link with our image
+    const svg = a.querySelector("svg");
+    const existingImg = a.querySelector("img.et-service-icon-img");
+    if(existingImg) return;
+    if(svg){
+      const img = document.createElement("img");
+      img.className = "et-service-icon-img";
+      img.src = iconSrc;
+      img.alt = "";
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.width = 52;
+      img.height = 52;
+      svg.replaceWith(img);
+      return;
+    }
+    // sometimes icon is inside a div with role img
+    const iconHolder = a.querySelector('[class*="rounded"],[class*="icon"],[data-icon-holder]');
+    if(iconHolder && !iconHolder.querySelector("img.et-service-icon-img")){
+      const img = document.createElement("img");
+      img.className = "et-service-icon-img";
+      img.src = iconSrc;
+      img.alt = "";
+      img.loading = "lazy";
+      img.decoding = "async";
+      img.width = 52;
+      img.height = 52;
+      iconHolder.prepend(img);
+    }
+  }
+
+  function patchServiceIcons(){
+    const links = document.querySelectorAll('a[href]');
+    links.forEach(a=>{
+      const href = a.getAttribute("href") || "";
+      if(href.includes("/services/grouting")) replaceIconInLink(a, ICONS.grouting);
+      if(href.includes("/services/cavity") || href.includes("/services/detection")) replaceIconInLink(a, ICONS.cavity);
+      if(href.includes("/services/geophysical")) replaceIconInLink(a, ICONS.geophysical);
+    });
+  }
+
+  function runAll(){
+    ensureSocialLinks();
+    patchServiceIcons();
+  }
+
+  // Run now + on SPA navigations
+  const schedule = () => requestAnimationFrame(runAll);
+  window.addEventListener("load", schedule);
+
+  // Observe DOM changes to patch after route changes/renders
+  const obs = new MutationObserver((muts)=>{
+    // simple debounce
+    if(window.__etlaqPatchTimer) return;
+    window.__etlaqPatchTimer = setTimeout(()=>{
+      window.__etlaqPatchTimer = null;
+      runAll();
+    }, 120);
+  });
+  obs.observe(document.documentElement, { childList:true, subtree:true });
+
+  // Also hook history changes
+  const _push = history.pushState;
+  history.pushState = function(){
+    _push.apply(this, arguments);
+    schedule();
+  };
+  window.addEventListener("popstate", schedule);
+
+  // initial
+  runAll();
+})();
+</script>
+<script>
+/* v16: Ensure clicking the same nav link reloads the page (SPA same-route click) */
+(function () {
+  function normalizePath(p) {
+    try {
+      if (p.length > 1 && p.endsWith('/')) return p.slice(0, -1);
+    } catch (e) {}
+    return p;
+  }
+
+  document.addEventListener('click', function (e) {
+    var a = e.target && e.target.closest ? e.target.closest('a') : null;
+    if (!a) return;
+
+    var href = a.getAttribute('href');
+    if (!href) return;
+
+    // Ignore external / special links
+    if (href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:') || href.startsWith('javascript:')) return;
+
+    // If absolute URL, allow only same-origin
+    try {
+      var url = new URL(a.href, window.location.origin);
+      if (url.origin !== window.location.origin) return;
+
+      var targetPath = normalizePath(url.pathname);
+      var currentPath = normalizePath(window.location.pathname);
+
+      
+      // Blog back safety: avoid SPA crash when leaving a blog post back to blog index
+      var isBlogPost = /\/blog\/[^\/]+\/?$/.test(currentPath);
+      var isBlogIndex = /\/blog\/?$/.test(targetPath);
+      if (isBlogPost && isBlogIndex) {
+        e.preventDefault();
+        e.stopPropagation();
+        var prefix = window.location.pathname.startsWith('/en') ? '/en' : (window.location.pathname.startsWith('/ar') ? '/ar' : '');
+        window.location.href = prefix + '/blog';
+        return;
+      }
+
+if (targetPath === currentPath) {
+        e.preventDefault();
+        e.stopPropagation();
+        // Hard reload to re-run page logic & restore expected behavior
+        window.location.href = url.href;
+      }
+    } catch (err) {
+      return;
+    }
+  }, true);
+})();
+</script>
+
+<script>
+/* Blog popstate safety: force a clean reload when navigating back from a blog post to the blog index */
+(function(){
+  var prevPath = window.location.pathname;
+  function isBlogPost(p){ return /\/blog\/[^\/]+\/?$/.test(p); }
+  function isBlogIndex(p){ return /\/blog\/?$/.test(p); }
+  function onNav(){
+    var nextPath = window.location.pathname;
+    if (isBlogPost(prevPath) && isBlogIndex(nextPath)) {
+      window.location.reload();
+      return;
+    }
+    prevPath = nextPath;
+  }
+  var _push = history.pushState;
+  history.pushState = function(){ _push.apply(this, arguments); onNav(); };
+  var _replace = history.replaceState;
+  history.replaceState = function(){ _replace.apply(this, arguments); onNav(); };
+  window.addEventListener('popstate', onNav);
+})();
+</script>
+
+`cat /tmp/netlify_hidden_forms_snippet.html`
+
+<!-- Netlify Forms hidden definitions (v32) -->
+<div style="display:none" aria-hidden="true">
+  <!-- Contact form -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="contact" />
+    <input name="bot-field" />
+    <input name="page" />
+    <input name="referrer" />
+    <input name="utm_source" />
+    <input name="utm_medium" />
+    <input name="utm_campaign" />
+    <input name="utm_content" />
+    <input name="utm_term" />
+    <input name="name" />
+    <input name="email" />
+    <input name="phone" />
+    <input name="company" />
+    <input name="projectType" />
+    <textarea name="inquiry"></textarea>
+    <input type="file" name="attachments" multiple />
+  </form>
+
+  <!-- Request Service form -->
+  <form name="request-service" data-netlify="true" netlify-honeypot="bot-field" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="request-service" />
+    <input name="bot-field" />
+    <input name="page" />
+    <input name="referrer" />
+    <input name="utm_source" />
+    <input name="utm_medium" />
+    <input name="utm_campaign" />
+    <input name="utm_content" />
+    <input name="utm_term" />
+    <input name="service" />
+    <input name="projectType" />
+    <input name="clientType" />
+    <input name="city" />
+    <input name="problem" />
+    <input name="problemType" />
+    <input name="name" />
+    <input name="phone" />
+    <input name="email" />
+    <input name="company" />
+    <input type="file" name="attachments" multiple />
+  </form>
+
+  <!-- Quick Assessment tool -->
+  <form name="quick-assessment" data-netlify="true" netlify-honeypot="bot-field" method="POST" enctype="multipart/form-data">
+    <input type="hidden" name="form-name" value="quick-assessment" />
+    <input name="bot-field" />
+    <input name="page" />
+    <input name="referrer" />
+    <input name="utm_source" />
+    <input name="utm_medium" />
+    <input name="utm_campaign" />
+    <input name="utm_content" />
+    <input name="utm_term" />
+    <input name="clientType" />
+    <input name="problemType" />
+    <input type="file" name="attachments" multiple />
+  </form>
+</div>
+
+</body>
+</html>

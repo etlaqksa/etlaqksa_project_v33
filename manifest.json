@@ -1,0 +1,24 @@
+{
+  "name": "شركة إطلاق المتميزة",
+  "short_name": "إطلاق",
+  "description": "رواد حلول حقن التربة ومعالجة التكهفات في المملكة العربية السعودية",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#FFFFFF",
+  "theme_color": "#0B2D4D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+}

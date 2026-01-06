@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms Test</title>
+  </head>
+  <body>
+    <h1>Netlify Forms Smoke Test</h1>
+    <p>If this submission shows up in Netlify &rarr; Forms, form detection is working.</p>
+
+    <form name="forms-test" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="/forms-test/thanks.html">
+      <input type="hidden" name="form-name" value="forms-test" />
+      <p style="display:none">
+        <label>Don’t fill this out if you’re human: <input name="bot-field" /></label>
+      </p>
+      <p>
+        <label>Your email: <input type="email" name="email" required /></label>
+      </p>
+      <p>
+        <label>Message: <textarea name="message" required>Testing Netlify Forms.</textarea></label>
+      </p>
+      <button type="submit">Send test submission</button>
+    </form>
+
+    <p><a href="/__forms.html">Open hidden form definitions</a></p>
+  </body>
+</html>

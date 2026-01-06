@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Slideshow</title>
+    <style>
+        .slideshow {
+            width: 800px;
+            height: 450px;
+            position: relative;
+            margin: 50px auto;
+            border: 2px solid #ccc;
+        }
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            transition: opacity 1s;
+        }
+        .slide.active {
+            opacity: 1;
+        }
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Test Gallery Slideshow</h1>
+    <div class="slideshow">
+        <div class="slide active">
+            <img src="/gallery/Etlaq_(1).webp" alt="Image 1">
+        </div>
+        <div class="slide">
+            <img src="/gallery/Etlaq_(5).webp" alt="Image 5">
+        </div>
+        <div class="slide">
+            <img src="/gallery/Etlaq_(10).webp" alt="Image 10">
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        setInterval(() => {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }, 3000);
+    </script>
+</body>
+</html>
+

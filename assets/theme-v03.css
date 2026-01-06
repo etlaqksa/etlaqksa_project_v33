@@ -1,0 +1,152 @@
+/* Etlaqksa Theme v03 — Authority Blue + Technical Cyan */
+:root{
+  --et-primary:#0B2D4D;
+  --et-secondary:#F5F7FA;
+  --et-surface:#FFFFFF;
+  --et-border:#E6ECF2;
+  --et-accent:#00B8D9;
+  --et-accent-hover:#0096B1;
+  --et-accent-tint:#E6F9FF;
+
+  --et-text:#0F172A;
+  --et-text-muted:#475569;
+  --et-text-disabled:#94A3B8;
+}
+
+/* Map into existing design tokens (Tailwind/shadcn-style) */
+:root{
+  --primary:var(--et-primary);
+  --primary-foreground:#FFFFFF;
+
+  --secondary:var(--et-secondary);
+  --secondary-foreground:var(--et-text);
+
+  --accent:var(--et-accent);
+  --accent-foreground:var(--et-primary);
+
+  --background:var(--et-surface);
+  --foreground:var(--et-text);
+
+  --card:var(--et-surface);
+  --card-foreground:var(--et-text);
+
+  --popover:var(--et-surface);
+  --popover-foreground:var(--et-text);
+
+  --muted:var(--et-secondary);
+  --muted-foreground:var(--et-text-muted);
+
+  --border:var(--et-border);
+  --input:var(--et-border);
+  --ring:var(--et-accent);
+}
+
+/* Typography */
+html[lang="ar"] body{ font-family:"Tajawal", "Almarai", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+html[lang="en"] body{ font-family:"Inter", "Montserrat", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+
+/* Links / focus */
+a{ color:var(--et-accent); }
+a:hover{ color:var(--et-accent-hover); }
+:focus-visible{ outline:2px solid var(--et-accent); outline-offset:2px; }
+
+/* Common Tailwind class override used in build */
+.bg-blue-600{ background-color:var(--et-primary)!important; }
+
+/* App background: remove orange/purple and unify to blue/cyan */
+.app-background{
+  background-color:var(--et-surface)!important;
+  background-image:
+    radial-gradient(1200px at 10% 10%, color-mix(in srgb, var(--et-accent) 18%, transparent) 0%, transparent 60%),
+    radial-gradient(1000px at 90% 0%, color-mix(in srgb, var(--et-primary) 18%, transparent) 0%, transparent 55%),
+    radial-gradient(900px at 50% 100%, color-mix(in srgb, var(--et-accent) 10%, transparent) 0%, transparent 55%) !important;
+}
+
+/* Gradient effects (previously blue/purple) */
+.card-hover:before,
+.image-hover-overlay:after,
+.border-hover-expand:before{
+  background:linear-gradient(135deg, color-mix(in srgb, var(--et-accent) 60%, transparent), color-mix(in srgb, var(--et-primary) 60%, transparent))!important;
+}
+.text-hover-gradient{
+  background:linear-gradient(90deg,var(--et-accent),var(--et-primary),var(--et-accent)) 0 0/200%!important;
+  -webkit-background-clip:text!important;
+  background-clip:text!important;
+  color:transparent!important;
+}
+
+/* Chips / badges (if present) */
+.badge-accent,
+.chip-accent{
+  background:var(--et-accent-tint);
+  border:1px solid color-mix(in srgb, var(--et-accent) 25%, var(--et-border));
+  color:var(--et-primary);
+}
+
+
+/* v14 — Footer contrast improvements + social links */
+footer[data-loc*="Footer.tsx"]{
+  background: var(--et-primary) !important;
+  color: #fff !important;
+}
+footer[data-loc*="Footer.tsx"] a{ color: var(--et-accent) !important; }
+footer[data-loc*="Footer.tsx"] a:hover{ color: var(--et-accent-hover) !important; }
+footer[data-loc*="Footer.tsx"] p,
+footer[data-loc*="Footer.tsx"] span,
+footer[data-loc*="Footer.tsx"] li{ color: rgba(255,255,255,0.86) !important; }
+footer[data-loc*="Footer.tsx"] h3,
+footer[data-loc*="Footer.tsx"] h4{ color:#fff !important; }
+footer[data-loc*="Footer.tsx"] .border-border{ border-color: rgba(255,255,255,0.12) !important; }
+
+.et-social-block{ margin-top:14px; display:flex; flex-direction:column; gap:10px; }
+.et-social-label{ color:rgba(255,255,255,0.92); font-weight:700; letter-spacing:.2px; }
+.et-social-links{ display:flex; gap:10px; flex-wrap:wrap; }
+.et-social-links a{
+  width:40px; height:40px; border-radius:12px;
+  display:inline-flex; align-items:center; justify-content:center;
+  border:1px solid rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.06);
+  color:#fff;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.et-social-links a:hover{
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--et-accent) 18%, rgba(255,255,255,0.06));
+  border-color: color-mix(in srgb, var(--et-accent) 55%, rgba(255,255,255,0.18));
+}
+.et-social-links a::before{
+  content:"";
+  width:20px; height:20px;
+  background-size:contain;
+  background-repeat:no-repeat;
+  background-position:center;
+}
+.et-social-links a[data-icon="tiktok"]::before{ background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M21%208.5a6.5%206.5%200%200%201-4.2-1.6V16a6.5%206.5%200%201%201-6.5-6.5c.4%200%20.8%200%201.2.1v3.3c-.4-.2-.8-.3-1.2-.3a3.2%203.2%200%201%200%203.2%203.2V2h3.3c.3%202.1%201.6%203.8%203.6%204.5v2z%22/%3E%3C/svg%3E'); }
+.et-social-links a[data-icon="instagram"]::before{ background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M7%202h10a5%205%200%200%201%205%205v10a5%205%200%200%201-5%205H7a5%205%200%200%201-5-5V7a5%205%200%200%201%205-5zm10%202H7a3%203%200%200%200-3%203v10a3%203%200%200%200%203%203h10a3%203%200%200%200%203-3V7a3%203%200%200%200-3-3zm-5%204.2A3.8%203.8%200%201%201%208.2%2012%203.8%203.8%200%200%201%2012%208.2zm0%202A1.8%201.8%200%201%200%2013.8%2012%201.8%201.8%200%200%200%2012%2010.2zM17.7%206.3a.9.9%200%201%201-.9.9.9.9%200%200%201%20.9-.9z%22/%3E%3C/svg%3E'); }
+.et-social-links a[data-icon="x"]::before{ background-image:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22currentColor%22%3E%3Cpath%20d%3D%22M18.9%202H22l-6.8%207.8L23%2022h-6.6l-5.2-6.8L5.3%2022H2l7.3-8.4L1%202h6.7l4.7%206.1L18.9%202zm-1.1%2018h1.7L6.8%203.9H5L17.8%2020z%22/%3E%3C/svg%3E'); }
+
+/* v14 — WhatsApp button: clearer icon + official green */
+a[aria-label="WhatsApp"], a[data-loc*="WhatsAppButton.tsx"]{
+  background:#25D366 !important;
+  color:#fff !important;
+  box-shadow: 0 12px 26px rgba(0,0,0,0.22) !important;
+  border: 2px solid rgba(255,255,255,0.25) !important;
+}
+a[aria-label="WhatsApp"] svg, a[data-loc*="WhatsAppButton.tsx"] svg{ display:none !important; }
+a[aria-label="WhatsApp"]::before, a[data-loc*="WhatsAppButton.tsx"]::before{
+  content:"";
+  width:22px; height:22px;
+  background:url('data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2032%2032%22%20fill%3D%22white%22%3E%0A%3Cpath%20d%3D%22M19.11%2017.45c-.28-.14-1.64-.81-1.9-.9-.25-.09-.44-.14-.62.14-.18.28-.71.9-.87%201.09-.16.19-.32.21-.6.07-.28-.14-1.17-.43-2.23-1.37-.82-.73-1.37-1.63-1.53-1.91-.16-.28-.02-.43.12-.57.12-.12.28-.32.41-.48.14-.16.18-.28.28-.46.09-.18.05-.35-.02-.5-.07-.14-.62-1.5-.85-2.05-.22-.54-.45-.47-.62-.48h-.53c-.18%200-.46.07-.7.35-.25.28-.94.92-.94%202.25s.96%202.61%201.1%202.79c.14.18%201.89%202.88%204.58%204.03.64.28%201.15.45%201.54.58.65.21%201.24.18%201.7.11.52-.08%201.64-.67%201.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.53-.33z%22/%3E%0A%3Cpath%20d%3D%22M26.67%205.33A14.55%2014.55%200%200%200%2016.02%201.1C8.02%201.1%201.5%207.62%201.5%2015.62c0%202.56.67%205.06%201.95%207.27L1.4%2030.9l8.2-2.05a14.47%2014.47%200%200%200%206.42%201.5h.01c8%200%2014.52-6.52%2014.52-14.52%200-3.88-1.51-7.52-4.28-10.5zM16.02%2027.6h-.01a12.06%2012.06%200%200%201-6.14-1.68l-.44-.26-4.86%201.22%201.3-4.73-.29-.49a12.05%2012.05%200%200%201-1.87-6.44c0-6.65%205.41-12.06%2012.06-12.06%203.22%200%206.25%201.25%208.53%203.53a11.96%2011.96%200%200%201%203.52%208.53c0%206.65-5.41%2012.38-12.06%2012.38z%22/%3E%0A%3C/svg%3E') center/contain no-repeat;
+  display:block;
+}
+a[aria-label="WhatsApp"]:hover, a[data-loc*="WhatsAppButton.tsx"]:hover{
+  filter: brightness(0.98);
+  transform: translateY(-1px) scale(1.06);
+}
+
+/* v14 — Service icon images: consistent size */
+.et-service-icon-img{
+  width:52px; height:52px; object-fit:contain;
+  filter: drop-shadow(0 10px 16px rgba(0,0,0,0.10));
+}
+

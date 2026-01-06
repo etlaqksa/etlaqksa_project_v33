@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex,nofollow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Netlify Forms (Hidden)</title>
+  </head>
+  <body>
+    <!--
+      This file exists ONLY so Netlify can detect forms at deploy time.
+      Netlify Forms requires the form markup to be present in static HTML.
+    -->
+
+    <div style="display:none">
+      <!-- Contact form -->
+      <form name="contact" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="contact" />
+        <input name="bot-field" />
+
+        <input name="page" />
+        <input name="referrer" />
+        <input name="utm_source" />
+        <input name="utm_medium" />
+        <input name="utm_campaign" />
+        <input name="utm_content" />
+        <input name="utm_term" />
+
+        <input name="name" />
+        <input name="email" />
+        <input name="phone" />
+        <input name="company" />
+        <input name="projectType" />
+        <textarea name="inquiry"></textarea>
+        <input type="file" name="attachments" multiple />
+      </form>
+
+      <!-- Request service form -->
+      <form name="request-service" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="request-service" />
+        <input name="bot-field" />
+
+        <input name="page" />
+        <input name="referrer" />
+        <input name="utm_source" />
+        <input name="utm_medium" />
+        <input name="utm_campaign" />
+        <input name="utm_content" />
+        <input name="utm_term" />
+
+        <input name="service" />
+        <input name="projectType" />
+        <input name="city" />
+        <textarea name="problem"></textarea>
+        <input name="name" />
+        <input name="phone" />
+        <input name="email" />
+        <input name="company" />
+        <input type="file" name="attachments" multiple />
+      </form>
+
+      <!-- Quick assessment form -->
+      <form name="quick-assessment" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" enctype="multipart/form-data">
+        <input type="hidden" name="form-name" value="quick-assessment" />
+        <input name="bot-field" />
+
+        <input name="page" />
+        <input name="referrer" />
+        <input name="utm_source" />
+        <input name="utm_medium" />
+        <input name="utm_campaign" />
+        <input name="utm_content" />
+        <input name="utm_term" />
+
+        <input name="clientType" />
+        <input name="problemType" />
+        <input type="file" name="attachments" multiple />
+      </form>
+    </div>
+  </body>
+</html>

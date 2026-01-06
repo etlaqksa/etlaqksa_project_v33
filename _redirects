@@ -1,0 +1,24 @@
+# v33 - Netlify redirects (SPA safe rewrites)
+# Notes:
+# - Prefer 200 rewrites (not 301) so SPA routes work reliably and POST requests don't get redirected.
+# - Netlify will still serve real files directly (like /__forms.html, /assets/*, PDFs) before these fallbacks.
+
+# Language-specific SPA entrypoints
+/en/*                 /en/index.html           200
+/ar/*                 /ar/index.html           200
+
+# Default language (Arabic) for non-prefixed routes
+/                     /ar/index.html           200
+/about*               /ar/index.html           200
+/services*            /ar/index.html           200
+/projects*            /ar/index.html           200
+/gallery*             /ar/index.html           200
+/contact*             /ar/index.html           200
+/request-service*     /ar/index.html           200
+
+# Keep the built static PDF/HTML routes if used
+/white-paper          /white-paper.html        200
+/white-paper/         /white-paper.html        200
+
+# Final SPA fallback
+/*                    /ar/index.html           200
